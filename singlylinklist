@@ -38,6 +38,7 @@ class linkedlist:
         print(elems)
 
 
+# Linked List demo
 my_list = linkedlist()
 my_list.printList()
 my_list.append(1)
