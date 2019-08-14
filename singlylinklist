@@ -11,15 +11,27 @@ class linkedlist:
         self.head = None
 
     def append(self, data):
+        # Create a new node
         new_node = node(data)
-        cur = self.head
-        if(cur == None):
+
+        # If the Linked List is empty, then make the
+        # new node as head
+        if self.head is None:
             self.head = new_node
-        else:
-            while cur.next != None:
-                cur = cur.next
-            cur.next = new_node
-            self.head = cur
+            return
+
+        # Else traverse till the last node
+        last = self.head
+        while (last.next):
+            last = last.next
+
+        # Change the next of last node
+        last.next = new_node
+
+    def push(self,data):
+        new_node = node(data)
+        new_node.next = self.head
+        self.head = new_node;
 
     def length(self):
         total=0
@@ -33,15 +45,31 @@ class linkedlist:
         elems = []
         temp = self.head
         while (temp):
-            elems.append(temp.data),
+            elems.append(temp.data)
             temp = temp.next
         print(elems)
 
 
 # Linked List demo
+#Append Node at the end
 my_list = linkedlist()
 my_list.printList()
 my_list.append(1)
 my_list.append(2)
+my_list.append(3)
+print('Append node at the end of the list')
 my_list.printList()
+
+print('--------------------------------')
+
+my_list1 = linkedlist()
+my_list.push(12)
+my_list.push(6)
+my_list.push(11)
+my_list.push(2)
+print('Push the node in the list')
+my_list.printList()
+
+
+
 
