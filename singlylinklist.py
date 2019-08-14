@@ -6,6 +6,7 @@ class node:
         self.next = None
 
 # This class represents Linkedlist class
+# It has append / push / display functionality
 class linkedlist:
     def __init__(self):
         self.head = None
