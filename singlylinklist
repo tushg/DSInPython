@@ -1,10 +1,11 @@
+#This class represents Node class
 class node:
 
     def __init__(self, data):
         self.data = data
         self.next = None
 
-
+# This class represents Linkedlist class
 class linkedlist:
     def __init__(self):
         self.head = None
@@ -35,6 +36,7 @@ class linkedlist:
             elems.append(temp.data),
             temp = temp.next
         print(elems)
+
 
 my_list = linkedlist()
 my_list.printList()
